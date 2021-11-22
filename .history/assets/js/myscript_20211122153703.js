@@ -4,5 +4,5 @@
 
 // CNAME www webredir.vip.gandi.net
 // 	A nihs.tw 217.70.184.38
-
+// 
 // alert("hello world3");
