@@ -66,6 +66,15 @@ https://templatemo.com/tm-568-digimedia
   console.log(urlParams.toString()); // "q=1234&txt=abc"
   console.log(urlParams.append('page', '1')); // "q=1234&txt=abc&page=1"
 
+  myredirect = urlParams.get('txt');
+  if (myredirect = 'abc')
+  {
+    fbq('trackCustom', 'MyCustomEvent', {custom_param: 'custom_value_1',test_event_code: 'TEST58587'});
+  }
+  else
+  {
+    fbq('trackCustom', 'MyCustomEvent', {custom_param: 'custom_value_2',test_event_code: 'TEST58587'});
+  }
 </script>
 
   <!-- ***** Preloader Start ***** -->
