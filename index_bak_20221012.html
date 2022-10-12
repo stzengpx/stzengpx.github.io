@@ -51,7 +51,32 @@ https://templatemo.com/tm-568-digimedia
 /></noscript>
 <!-- End Facebook Pixel Code -->
 
+<script>
+  fbq('trackCustom', 'MyCustomEvent', {custom_param: 'custom_value',test_event_code: 'TEST58587'});
+</script>
 
+<script>
+  let urlParams = new URLSearchParams(window.location.search);
+
+  // https://www.nihs.tw/?q=1234&txt=abc&page=1
+
+  console.log(urlParams.has('q')); // true
+  console.log(urlParams.get('txt')); // "abc"
+  console.log(urlParams.getAll('action')); // ["abc"]
+  console.log(urlParams.toString()); // "q=1234&txt=abc"
+  console.log(urlParams.append('page', '1')); // "q=1234&txt=abc&page=1"
+
+  myredirect = urlParams.get('txt');
+  if (myredirect == 'abc')
+  {
+    fbq('trackCustom', 'MyCustomEvent', {custom_param: 'custom_value_1',test_event_code: 'TEST58587'});
+    // window.location.href="/homepage_1.html";
+  }
+  else
+  {
+    fbq('trackCustom', 'MyCustomEvent', {custom_param: 'custom_value_2',test_event_code: 'TEST58587'});
+  }
+</script>
 
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -699,6 +724,7 @@ https://templatemo.com/tm-568-digimedia
         </div>
       </div>
     </div>
+    <div><a target="_blank" href="https://icons8.com/icon/QArJIw7UOykb/drink">Drink</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
   </footer>
 
 
@@ -711,5 +737,6 @@ https://templatemo.com/tm-568-digimedia
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/myscript.js"></script>
 
+  
 </body>
 </html>
